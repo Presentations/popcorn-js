@@ -2041,7 +2041,7 @@
       }
     }
 
-    return list.join( "," ).toLowerCase().split( ",");
+    return list.join( "," ).toLowerCase().split( "," );
   }
 
   //  Protected API methods
