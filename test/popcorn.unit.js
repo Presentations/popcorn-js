@@ -2768,7 +2768,7 @@ test( "In/Out aliases", function() {
   Popcorn.plugin( "aliasTester", function() {
 
     return {
-      "in": function() {
+      in: function() {
         counter++;
       },
       out: function() {
@@ -2778,7 +2778,7 @@ test( "In/Out aliases", function() {
   });
 
   popcorn.aliasTester({
-    "in": 1,
+    in: 1,
     out: 3
   });
 
