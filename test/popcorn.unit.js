@@ -620,6 +620,7 @@ test( "play(n)/pause(n) custom stop()", function() {
     if ( ++count === expects ) {
       // Remove custom stop() method
       delete Popcorn.p.stop;
+      $pop.destroy();
       start();
     }
   }
