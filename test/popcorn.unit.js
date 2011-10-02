@@ -608,18 +608,11 @@ test( "play(n)/pause(n) custom stop()", function() {
     return this.pause( 0 );
   };
 
-  var outerHTML = [
-      "<video id='video-fixture' preload='auto' controls='' style='display:;width:300px' tabindex='0'>",
-      document.getElementById( "video" ).innerHTML,
-      "</video>"
-      ].join( "\n" ),
-      count = 0,
+  var count = 0,
       expects = 2,
       $pop;
 
-  document.getElementById("qunit-fixture").innerHTML = outerHTML;
-
-  $pop = Popcorn( "#video-fixture" );
+  $pop = Popcorn( "#video" );
 
   expect( expects );
 
@@ -633,9 +626,7 @@ test( "play(n)/pause(n) custom stop()", function() {
 
   stop( 8000 );
 
-  $pop.listen( "canplayall", function() {
-
-    this.exec( 4, function() {
+    $pop.exec( 4, function() {
     
       this.exec( 0, function() {
 
@@ -646,7 +637,6 @@ test( "play(n)/pause(n) custom stop()", function() {
         plus();
       }).stop();
     }).play( 3 );
-  });
 });
 
 
