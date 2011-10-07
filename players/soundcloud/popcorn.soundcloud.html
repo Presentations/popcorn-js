@@ -52,27 +52,11 @@
           popcorn.mute();
         }, false);
         
-        popcorn = Popcorn( Popcorn.soundcloud( "media_1", "http://soundcloud.com/forss/flickermood", {
-          width: "50%",
-          /*
-            This demo contains an api key used for retrieving comments from Soundcloud's API
-            It is to be used for demonstration purposes only, and for only this demo
-          */
-          api: {
-            key: "PRaNFlda6Bhf5utPjUsptg",
-            commentdiv: "commentDisplay"/*,
-            commentformat: (function() {
-              var count = 0;
-              
-              return function( comment ) {
-                return "<div>Comment # " + ( count++ ) + "<br />"
-                        + "<em>" + comment.user.name + "</em>: " + comment.text +"</div>";
-              }
-            })()*/
-          }
-        }) );
+        popcorn = Popcorn.soundcloud( "#media1", "http://soundcloud.com/forss/flickermood", {
+          autoplay: true
+        });
         
-        popcorn.listen( "load", function() {
+       /* popcorn.listen( "load", function() {
           
           document.getElementById( "media_duration" ).innerHTML = popcorn.duration();
           document.getElementById( "media_volume" ).innerHTML = popcorn.volume();
@@ -157,12 +141,12 @@
           src: 'https://www.drumbeat.org/media//images/drumbeat-logo-splash.png',
           target: 'imagediv'
         })
-        .video.registerPopcornWithPlayer( popcorn );
+        .video.registerPopcornWithPlayer( popcorn );*/
       }, false);
     </script>
   </head>
   <body>
-    <div id="media_1" ></div><br />
+    <div id="media1" style="width:700px;height:100px;"></div><br />
       
     <div>
       <button class="simple" id="btnPlay">Play</button>
