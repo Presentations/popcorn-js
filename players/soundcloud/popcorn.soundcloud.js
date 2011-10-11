@@ -2,7 +2,9 @@ Popcorn.player( "soundcloud", {
 
   _setup: function( options ) {
 
-    var media = this;
+    var media = this,
+        currentTime,
+        seeking;
 
     //  setup our swfobject with the necessary parameters
     var setupSoundcloud = function() {
@@ -11,7 +13,6 @@ Popcorn.player( "soundcloud", {
       var flashvars = {
         enable_api: true,
         object_id: media.id,
-        classid: "clsid:D27CDB6E-AE6D-11cf-96B8-444553540000",
         url: media.src
       },
 
@@ -40,6 +41,24 @@ Popcorn.player( "soundcloud", {
 
       soundcloud.addEventListener( "onPlayerReady", function( player, data ) {
         options.autoplay && player.api_play();
+      });
+
+      Popcorn.player.defineProperty( media, "currentTime", {
+
+        set: function( val ) {
+
+          // make sure val is a number
+          currentTime = seekTime = +val;
+          seeking = true;
+          media.dispatchEvent( "seeked" );
+          media.dispatchEvent( "timeupdate" );
+          youtubeObject.seekTo( currentTime );
+          return currentTime;
+        },
+        get: function() {
+
+          return currentTime;
+        }
       });
     }
 
