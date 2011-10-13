@@ -15,4 +15,4 @@ Examples
 -------------
 
 * Hide controls [jsFiddle]( http://jsfiddle.net/8zZ8s/ )
-* Show/hide controls every other second [jsFiddle]()
+* Show/hide controls every other second [jsFiddle](http://jsfiddle.net/k2TTY/)
