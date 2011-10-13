@@ -6,7 +6,7 @@ cue is an alias to exec(), meaning it provides the same functionality but is sim
 * **time** - the time in which the cue will be fired at
 * **callback** - a callback function that will be executed at a given **time** in a cue
 
-Examples
+Example
 --------------------
 
 Cue is used in the exact same fashion as exec:
