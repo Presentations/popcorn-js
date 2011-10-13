@@ -13,4 +13,4 @@ Examples
 ---------
 
 * Log some data at 1 second then reload the video at 3 seconds [jsFiddle](http://jsfiddle.net/6cBvz/)
-* Log some data at 1 second, then change the source of the video and setting it to autoplay [jsFiddle](http://jsfiddle.net/ESMUm/)
+* Log some data at 1 second, then change the source of the video and setting it to autoplay [jsFiddle](http://jsfiddle.net/ESMUm/3/)
