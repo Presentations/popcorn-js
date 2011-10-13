@@ -1,4 +1,5 @@
 loop( flag )
+============
 
 controls is a native HTML video element method that we have thrown onto each popcorn instance for your convenience. When loop is set to true, it will restart the video when it finishes.  By default Popcorn videos will not loop.  
 
