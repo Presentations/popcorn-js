@@ -1405,8 +1405,10 @@ test( "Configurable Defaults", function() {
         plus();
       },
       end: function( event, options ) {
-        ok( true, "end fired" );
-        plus();
+        if ( count !== expects ) {
+          ok( true, "end fired" );
+          plus();
+        }
       }
     };
   },
@@ -1429,8 +1431,10 @@ test( "Configurable Defaults", function() {
         plus();
       },
       end: function( event, options ) {
-        ok( true, "end fired" );
-        plus();
+        if ( count !== expects ) {
+          ok( true, "end fired" );
+          plus();
+        }
       }
     };
   });
@@ -1451,8 +1455,10 @@ test( "Configurable Defaults", function() {
         plus();
       },
       end: function( event, options ) {
-        ok( true, "end fired" );
-        plus();
+        if ( count !== expects ) {
+          ok( true, "end fired" );
+          plus();
+        }
       }
     };
   });
@@ -2129,6 +2135,7 @@ test( "Popcorn Compose", function() {
   var popped = Popcorn( "#video" ),
       expects = 43,
       count = 0,
+      runOnce = false,
       effectTrackOne,
       effectTrackTwo,
       effectTrackThree,
@@ -2139,8 +2146,6 @@ test( "Popcorn Compose", function() {
           setup: 0,
           running: 0
         },
-        two: {
-          setup: 0,
           running: 0
         }
       };
@@ -2350,10 +2355,14 @@ test( "Popcorn Compose", function() {
       plus();
     },
     end: function( event, options ) {
-      ok( options.pluginoption, "plugin option exists at end" );
-      plus();
-      ok( options.composeoption, "compose option exists at end" );
-      plus();
+      // We only want this to run once when end is called, not on teardown     
+      if ( !runOnce ) {
+        runOnce = true;
+        ok( options.pluginoption, "plugin option exists at end" );
+        plus();
+        ok( options.composeoption, "compose option exists at end" );
+        plus();
+      }
     }
   });
 
@@ -2794,13 +2803,16 @@ test( "Functions", function() {
   //  TODO: break this into sep. units per function
   expect( 19 );
 
-  var popped = Popcorn( "#video" ), ffTrackId, rwTrackId, rw2TrackId, rw3TrackId, historyRef, trackEvents;
+  var popped = Popcorn( "#video" ), ffTrackId, rwTrackId, rw2TrackId, rw3TrackId, historyRef, trackEvents, count = 0;
 
 
   Popcorn.plugin( "ff", function() {
     return {
       start: function() {},
-      end: function() {}
+      end: function() {
+      
+        count++;
+      }
     };
   });
 
@@ -2840,6 +2852,7 @@ test( "Functions", function() {
 
   popped.removeTrackEvent( rwTrackId );
 
+  equal( count, 1, "trackEvents end was successfully called before it was removed" );
   equal( popped.data.history.length, 1, "1 TrackEvent in history index - after popped.removeTrackEvent( rwTrackId ); " );
   equal( popped.data.trackEvents.byStart.length, 3, "3 TrackEvents in popped.data.trackEvents.byStart " );
   equal( popped.data.trackEvents.byEnd.length, 3, "3 TrackEvents in popped.data.trackEvents.byEnd " );

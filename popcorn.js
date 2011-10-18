@@ -841,6 +841,7 @@
         //  Capture the position of the track being removed.
         if ( o._id === trackId ) {
           indexWasAt = i;
+          o._natives.end.call( obj, null, o );
           o._natives._teardown && o._natives._teardown.call( obj, o );
         }
       }
