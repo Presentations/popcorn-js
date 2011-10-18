@@ -1,7 +1,7 @@
 seeking()
 ===========
 
-seeking() is a native HTML video element method that we have thrown onto each popcorn instance for convenience. seeking() describes whether or not the current popcorn instances video is seeking or not.  seeking() takes no arguements.
+seeking() is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name. seeking() describes whether or not the current popcorn instances video is seeking or not.  seeking() takes no arguements.
 
 * returns - boolean value ( true/false )
 
@@ -13,4 +13,4 @@ Use Cases
 Examples
 ----------
 
-* Small example to show when the user is seeking [jsFiddle](http://jsfiddle.net/64mKe/) 
+* Small example to show when the user is seeking [jsFiddle](http://jsfiddle.net/popcornjs/gquDv/)

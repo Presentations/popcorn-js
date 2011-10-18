@@ -1,7 +1,7 @@
 muted( flag )
 =============
 
-muted is a native HTML video element method that we have thrown onto each popcorn instance for your convenience. Depending on the state of the flag, muted will either start playing muted or unmuted ( default is unmuted ).
+muted is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name. Depending on the state of the flag, muted will either start playing muted or unmuted ( default is unmuted ).
 
 * **flag** - boolean value stating whether to mute the video or not 
 
@@ -13,10 +13,10 @@ Use Cases
 Examples
 -----------
 
-* Mute the video as it starts [jsFiddle](http://jsfiddle.net/8Pdhh/)
+* Mute the video as it starts [jsFiddle](http://jsfiddle.net/popcornjs/5Ysdr/)
 
 Related
 ----------
 
 * mute
-*unmute
+* unmute

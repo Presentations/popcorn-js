@@ -11,4 +11,4 @@ Example
 
 Cue is used in the exact same fashion as exec:
 
-[Example Here](http://jsfiddle.net/rQfkB/)
+[Example Here](http://jsfiddle.net/popcornjs/a38mA/)

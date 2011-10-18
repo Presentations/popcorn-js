@@ -1,8 +1,7 @@
 preload( state )
 ================
 
-
-preload is a native HTML video element method that we have thrown onto each popcorn instance for convenience. Preload provides a hint to the user agent as to how much of the video to preloaded.  If autoplay is set to true, preload is ignored ( autoplay will try and play the video right away ). If an incorrect value is given, it defaults to auto.
+preload is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name. Preload provides a hint to the user agent as to how much of the video to preloaded.  If autoplay is set to true, preload is ignored ( autoplay will try and play the video right away ). If an incorrect value is given, it defaults to auto.
 
 * **state** - state takes the form of one of the following values:
   
@@ -20,6 +19,6 @@ Use Cases
 Examples
 ---------
 
-* Preload with auto specified [jsFiddle](http://jsfiddle.net/6kGRK/)
-* Preload with metadata specified [jsFiddle](http://jsfiddle.net/ZbG3Z/)
-* Preload with none specified [jsFiddle](http://jsfiddle.net/gqcrk/)
+* Preload with auto specified [jsFiddle](http://jsfiddle.net/popcornjs/Y32gd/)
+* Preload with metadata specified [jsFiddle](http://jsfiddle.net/popcornjs/z7fAF/)
+* Preload with none specified [jsFiddle](http://jsfiddle.net/popcornjs/cucwZ/)

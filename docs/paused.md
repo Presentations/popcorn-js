@@ -1,7 +1,7 @@
 paused()
 ==========
 
-paused() is a native HTML video element method that we have thrown onto each popcorn instance for convenience. paused() informs the user of whether or not the video is currently paused. It takes not arugements.
+paused() is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name. paused() informs the user of whether or not the video is currently paused. It takes not arugements.
 
 * returns - boolean value ( true/false )
 
@@ -13,5 +13,5 @@ Use Cases
 Examples
 =========
 
-* add a footnote everytime the video is paused [jsFiddle](http://jsfiddle.net/6weSM/) 
+* add a footnote everytime the video is paused [jsFiddle](http://jsfiddle.net/popcornjs/prdB6/1/)
 

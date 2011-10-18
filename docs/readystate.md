@@ -1,7 +1,7 @@
 readyState()
 ============
 
-readyState() is a native HTML video element method that we have thrown onto each popcorn instance for convenience. readystate returns a value from 0 - 4 describing at which state in loading the video is at. readystate() takes no arguements.
+readyState() is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name. readystate returns a value from 0 - 4 describing at which state in loading the video is at. readystate() takes no arguements.
 
 * returns:
   * 0 ( HAVE_NOTHING ) - no information regarding the media source is available
@@ -20,4 +20,4 @@ Use Cases
 Examples
 ----------
 
-* Basic example showcasing readyStates [jsFiddle](http://jsfiddle.net/P3EKk/)
+* Basic example showcasing readyStates [jsFiddle](http://jsfiddle.net/popcornjs/Qj8xX/)
