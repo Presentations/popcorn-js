@@ -1,6 +1,10 @@
 # autoplay( flag ) #
 
+## Purpose ##
+
 autoplay is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name.  autoplay is used set the video automatically play if it is set to true.
+
+## Options ##
 
 * **flag** - boolean value specifying whether the video should autoplay or not
 

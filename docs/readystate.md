@@ -1,7 +1,10 @@
-readyState()
-============
+# readyState() #
+
+## Purpose ##
 
 readyState() is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name. readystate returns a value from 0 - 4 describing at which state in loading the video is at. readystate() takes no arguements.
+
+## Options ##
 
 * returns:
   * 0 ( HAVE_NOTHING ) - no information regarding the media source is available
@@ -12,12 +15,10 @@ readyState() is a Popcorn instance method, defined as a passthrough accessor to 
 
 See the [HTML5 Video spec for readyStates](http://www.w3.org/TR/html5/video.html#dom-media-have_nothing) for more details
 
-Use Cases
------------
+## Use Cases ##
 
 * Perform tasks as soon as data is available by checking readyStates
 
-Examples
-----------
+## Examples ##
 
 * Basic example showcasing readyStates [jsFiddle](http://jsfiddle.net/popcornjs/Qj8xX/)
