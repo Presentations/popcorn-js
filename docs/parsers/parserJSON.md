@@ -18,7 +18,7 @@ The user sepcifies the the source of there json file in a data-timeline-sources 
 
 * Parses a popcorn json file ( this examples is assuming your json file is called data.json ) and that you are using data-timeline-sources
 
-`<html>
+```<html>
   <head>
     <script src="popcorn-complete.js"></script>
   </head>
@@ -44,6 +44,6 @@ The user sepcifies the the source of there json file in a data-timeline-sources 
     <div id="map-container"></div>
     <div id="iframe-container"></div>
   </body>
-</html>`
+</html>```
 
 * Parse a popcorn json file without data-timeline-sources [jsFiddle]()
