@@ -1,10 +1,10 @@
-# JSON parser #
+# XML parser #
 
 ## Purpose ##
 
-The JSON parser allows the user to parse json data that contains popcorn data in order to populate a popcorn instance.
+The XML parser allows the user to parse XML data that contains popcorn data in order to populate a popcorn instance.
  
-The user sepcifies the the source of there json file in a data-timeline-sources attribute on the video object.  When Popcorn is instantiated it will search each video element for a data-timeline-sources attribute and try and parse the sepcified file.
+The user sepcifies the the source of there XML file in a data-timeline-sources attribute on the video object.  When Popcorn is instantiated it will search each video element for a data-timeline-sources attribute and try and parse the sepcified file.
 
 ## Options ##
 
@@ -12,18 +12,18 @@ The user sepcifies the the source of there json file in a data-timeline-sources 
 
 ## Use Case ##
 
-* Parse a json file of popcorn data
+* Parse a XML file of popcorn data
 
 ## Example ##
 
-* Parses a popcorn json file ( this examples is assuming your json file is called data.json ) and that you are using data-timeline-sources
+* Parses a popcorn XML file ( this examples is assuming your XML file is called data.xml ) and that you are using data-timeline-sources
 
 ```<html>
   <head>
     <script src="popcorn-complete.js"></script>
   </head>
   <body>
-    <video id="video" data-timeline-sources="data/data.json"
+    <video id="video" data-timeline-sources="data/data.xml"
 
       controls
       width= '250px'
