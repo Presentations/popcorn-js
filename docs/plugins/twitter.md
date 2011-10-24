@@ -1,4 +1,4 @@
-# Twitter # 
+# Twitter #
 
 ## Purpose ##
 
@@ -15,14 +15,14 @@ Appends a Twitter widget to an element on the page.
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );
+    var pop = Popcorn( "#video" );
 
-pop.twitter({
-  start: 5,
-  end: 15,
-  title: "Steve Song",
-  src: "@stevesong",
-  target: "twitterdiv",
-});```
+    pop.twitter({
+      start: 5,
+      end: 15,
+      title: "Steve Song",
+      src: "@stevesong",
+      target: "twitterdiv",
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/GhD62/)

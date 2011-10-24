@@ -1,4 +1,4 @@
-# Timeline # 
+# Timeline #
 
 ## Purpose ##
 
@@ -16,15 +16,15 @@ Adds data associated with a certain time in the video, which creates a scrolling
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );
+    var pop = Popcorn( "#video" );
 
-pop.timeline({
-  start: 1,
-  target: "timeline",
-  title: "This is a title",
-  text: "this is some interesting text that goes inside",
-  innerHTML: "Click here for <a href='http://www.google.ca'>Google</a>" ,
-  direction: "up"
-});```
+    pop.timeline({
+      start: 1,
+      target: "timeline",
+      title: "This is a title",
+      text: "this is some interesting text that goes inside",
+      innerHTML: "Click here for <a href='http://www.google.ca'>Google</a>" ,
+      direction: "up"
+   });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/yspL2/)

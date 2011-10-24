@@ -1,4 +1,4 @@
-# Attribution # 
+# Attribution #
 
 ## Purpose ##
 
@@ -18,16 +18,16 @@ Allows the user to add proper attribution to the various sources used on the cur
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.attribution({
-  start: 0,
-  end: 10,
-  nameofwork: "A Shared Culture",
-  copyrightholder:"Jesse Dylan",
-  license: "CC-BY-N6",
-  licenseurl: "http://creativecommons.org/licenses/by-nc/2.0/",
-  target: "attribdiv"
-});```
+    pop.attribution({
+      start: 0,
+      end: 10,
+      nameofwork: "A Shared Culture",
+      copyrightholder:"Jesse Dylan",
+      license: "CC-BY-N6",
+      licenseurl: "http://creativecommons.org/licenses/by-nc/2.0/",
+      target: "attribdiv"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/AykAT/)

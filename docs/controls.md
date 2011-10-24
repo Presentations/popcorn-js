@@ -15,5 +15,5 @@ controls is a Popcorn instance method, defined as a passthrough accessor to the 
 
 ## Examples ##
 
-* Hide controls [jsFiddle](http://jsfiddle.net/popcornjs/z3z5w/) 
+* Hide controls [jsFiddle](http://jsfiddle.net/popcornjs/z3z5w/)
 * Show/hide controls every other second [jsFiddle](http://jsfiddle.net/popcornjs/e7rys/)

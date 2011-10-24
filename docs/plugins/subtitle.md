@@ -1,4 +1,4 @@
-# Subtitle # 
+# Subtitle #
 
 ## Purpose ##
 
@@ -13,12 +13,12 @@ Displays a subtitle over the video, or in the target div
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );
+    var pop = Popcorn( "#video" );
 
-pop.subtitle({
-  start: 5,
-  end: 15,
-  text: "this is the first subtitle of 2011",
-});```
+    pop.subtitle({
+      start: 5,
+      end: 15,
+      text: "this is the first subtitle of 2011",
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/p8Kbs/1/)

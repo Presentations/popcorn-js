@@ -15,15 +15,15 @@ Adds a feed from a specified blog url into the target div
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.googlefeed({
-  start: 0,
-  end: 15,
-  target: "feed",
-  url: "http://zenit.senecac.on.ca/~chris.tyler/planet/rss20.xml",
-  title: "Planet Feed",
-  orientation: "Vertical"
-});```
+    pop.googlefeed({
+      start: 0,
+      end: 15,
+      target: "feed",
+      url: "http://zenit.senecac.on.ca/~chris.tyler/planet/rss20.xml",
+      title: "Planet Feed",
+      orientation: "Vertical"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/rZmL8/)

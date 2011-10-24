@@ -21,13 +21,13 @@ The Flickr plugin allows the user to hook into the popular picture hosting site 
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.flickr({
-  start: 5,
-  end: 15,
-  userid: "35034346917@N01",
-  target: "flickrdiv"
-});```
+    pop.flickr({
+      start: 5,
+      end: 15,
+      userid: "35034346917@N01",
+      target: "flickrdiv"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/grMCk/);

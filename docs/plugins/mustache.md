@@ -1,4 +1,4 @@
-# Mustache # 
+# Mustache #
 
 ## Purpose ##
 
@@ -15,35 +15,35 @@ Adds the ability to render JSON using templates via the Mustache templating libr
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.mustache({
-  start: 5,  // seconds
-  end:  10,  // seconds
-  target: 'mustache-div',
-  template: '<h1>{{header}}</h1>'                           +
-    '{{#items}}'                                    +
-    '  {{#first}}'                                  +
-    '    <li><strong>{{name}}</strong></li>'        +
-    '  {{/first}}'                                  +
-    '  {{#link}}'                                   +
-    '    <li><a href="{{url}}">{{name}}</a></li>'   +
-    '  {{/link}}'                                   +
-    '{{/items}}'                                    +
-    ''                                              +
-    '{{#empty}}'                                    +
-    '  <p>The list is empty.</p>'                   +
-    '{{/empty}}'                                    ,
-  data:     '{'                                                        +
-    '  "header": "Test 1", '                                   +
-    '  "items": [ '                                            +
-    '      {"name": "red", "first": true, "url": "#Red"}, '    +
-    '      {"name": "green", "link": true, "url": "#Green"}, ' +
-    '      {"name": "blue", "link": true, "url": "#Blue"} '    +
-    '  ],'                                                     +
-    '  "empty": false'                                         +
-    '}',
-  static: true /* The json is not going to change, load it early. */
-});```
+    pop.mustache({
+      start: 5,  // seconds
+      end:  10,  // seconds
+      target: 'mustache-div',
+      template: '<h1>{{header}}</h1>'                           +
+        '{{#items}}'                                    +
+        '  {{#first}}'                                  +
+        '    <li><strong>{{name}}</strong></li>'        +
+        '  {{/first}}'                                  +
+        '  {{#link}}'                                   +
+        '    <li><a href="{{url}}">{{name}}</a></li>'   +
+        '  {{/link}}'                                   +
+        '{{/items}}'                                    +
+        ''                                              +
+        '{{#empty}}'                                    +
+        '  <p>The list is empty.</p>'                   +
+        '{{/empty}}'                                    ,
+      data:     '{'                                                        +
+        '  "header": "Test 1", '                                   +
+        '  "items": [ '                                            +
+        '      {"name": "red", "first": true, "url": "#Red"}, '    +
+        '      {"name": "green", "link": true, "url": "#Green"}, ' +
+        '      {"name": "blue", "link": true, "url": "#Blue"} '    +
+        '  ],'                                                     +
+        '  "empty": false'                                         +
+        '}',
+      static: true /* The json is not going to change, load it early. */
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/DmupJ/)

@@ -1,4 +1,4 @@
-# Processing # 
+# Processing #
 
 ## Purpose ##
 
@@ -14,12 +14,12 @@ This plugin adds a Processing.js sketch to be added to a target div or canvas.
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );
+    var pop = Popcorn( "#video" );
 
-pop.processing({
-  start: 0,
-  end: 10,
-  target: "processing-div",
-  sketch: "test.pjs",
-  noPause: true
-});```
+    pop.processing({
+      start: 0,
+      end: 10,
+      target: "processing-div",
+      sketch: "test.pjs",
+      noPause: true
+    });

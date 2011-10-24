@@ -1,4 +1,4 @@
-# Image # 
+# Image #
 
 ## Purpose ##
 
@@ -15,17 +15,17 @@ Show an image inside a given element on the page.
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.image({
-        // seconds
-        start: 5,
-        // seconds
-        end: 15,
-        href: "http://www.drumbeat.org/",
-        src: "https://www.drumbeat.org/media//images/drumbeat-logo-splash.png",
-        text: "DRUMBEAT",
-        target: "imagediv"
-});```
+    pop.image({
+      // seconds
+      start: 5,
+      // seconds
+      end: 15,
+      href: "http://www.drumbeat.org/",
+      src: "https://www.drumbeat.org/media//images/drumbeat-logo-splash.png",
+      text: "DRUMBEAT",
+      target: "imagediv"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/8ZFzH/1/)

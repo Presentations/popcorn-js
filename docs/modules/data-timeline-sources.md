@@ -1,22 +1,12 @@
-# TTML parser #
+# data-timeline-sources #
 
 ## Purpose ##
 
-The TTML parser allows the user to parse TTML subtitle data in order to populate a subtitle track event.
+The data-timeline-sources module adds functionality to the Popcorn.js core to parse custom data-timeline-sources attributes on HTML elements.
 
-The user sepcifies the the source of there TTML file in a data-timeline-sources attribute on the video object.  When Popcorn is instantiated it will search each video element for a data-timeline-sources attribute and try and parse the sepcified file.
+This is primarily used in association with Popcorn's parsers and allows the user to specify the source of the data to be parsed on the video element inside the data-timeline-sources attribute.  This allows popcorn to create a custom instance based on the data in data-timeline-sources.
 
-## Options ##
-
-* **data-timeline-sources** - a media element attribute that specifies the source of the file to be parsed
-
-## Use Case ##
-
-* Parse a TTML file of subtitle data
-
-## Example ##
-
-* Parses a popcorn TTML subtitle file to populate a subtitle track
+## Examples ##
 
     <html>
       <head>
@@ -43,4 +33,4 @@ The user sepcifies the the source of there TTML file in a data-timeline-sources 
         <div id="map-container"></div>
         <div id="iframe-container"></div>
       </body>
-    </html>
+   </html>

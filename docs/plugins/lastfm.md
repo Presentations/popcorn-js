@@ -1,4 +1,4 @@
-# Lastfm # 
+# Lastfm #
 
 ## Purpose ##
 
@@ -14,14 +14,14 @@ Appends information about a LastFM artist to an element on the page.
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.lastfm({
-  start: 5,
-  end: 15,
-  artist: "yacht",
-  target: "lastfmdiv",
-  apikey: "30ac38340e8be75f9268727cb4526b3d"
-});```
+    pop.lastfm({
+      start: 5,
+      end: 15,
+      artist: "yacht",
+      target: "lastfmdiv",
+      apikey: "30ac38340e8be75f9268727cb4526b3d"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/XVbup/)

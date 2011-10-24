@@ -1,4 +1,4 @@
-# Facebook # 
+# Facebook #
 
 ## Purpose ##
 
@@ -33,14 +33,15 @@ The facebook plugin allows the user to bring popular aspects from facebook and d
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
-pop.facebook({
-  type: "live-stream",
-  target: "activitydiv",
-  start: 1,
-  end: 10,
-  // id is from example http://developers.facebook.com/docs/reference/plugins/live-stream/
-  event_app_id: 174243249296725
-});```
+    var pop = Popcorn( "#video" );
+
+    pop.facebook({
+      type: "live-stream",
+      target: "activitydiv",
+      start: 1,
+      end: 10,
+      // id is from example http://developers.facebook.com/docs/reference/plugins/live-stream/
+      event_app_id: 174243249296725
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/UC6Px/);

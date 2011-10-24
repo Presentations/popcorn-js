@@ -1,4 +1,4 @@
-# Attribution # 
+# Code #
 
 ## Purpose ##
 
@@ -14,17 +14,17 @@ Allows for the ability to run arbitrary code ( JavaScript functions ) according 
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.code({
-  start: 1,
-  end: 3,
-  onStart: function( options ) {         
-    document.getElementById( "test1" ).innerHTML = "Yes";
-  },
-  onEnd: function( options ) {
-    document.getElementById( "test1" ).innerHTML = "No";
-  }
-});```
+    pop.code({
+      start: 1,
+      end: 3,
+      onStart: function( options ) {
+        document.getElementById( "test1" ).innerHTML = "Yes";
+      },
+      onEnd: function( options ) {
+        document.getElementById( "test1" ).innerHTML = "No";
+      }
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/Wmskz/)

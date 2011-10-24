@@ -7,7 +7,7 @@ preload is a Popcorn instance method, defined as a passthrough accessor to the H
 ## Options ##
 
 * **state** - state takes the form of one of the following values:
-  
+
   * auto - begins loading data as soon as possible
   * metadata - only loads the videos metadata (dimensions, first frame, track list, duration, etc)
   * none - loads no data

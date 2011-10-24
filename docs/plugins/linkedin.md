@@ -19,16 +19,16 @@ Places a  LinkedIn plugin inside a div ( http://developers.facebook.com/docs/plu
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.linkedin({
-  type: "share",
-  counter: "right",
-  url: "http://www.google.ca",
-  target: "sharediv",
-  apikey: "ZOLRI2rzQS_oaXELpPF0aksxwFFEvoxAFZRLfHjaAhcGPfOX0Ds4snkJpWwKs8gk",
-  start: 1,
-  end: 4
-});```
+    pop.linkedin({
+      type: "share",
+      counter: "right",
+      url: "http://www.google.ca",
+      target: "sharediv",
+      apikey: "ZOLRI2rzQS_oaXELpPF0aksxwFFEvoxAFZRLfHjaAhcGPfOX0Ds4snkJpWwKs8gk",
+      start: 1,
+      end: 4
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/xCZUB/)

@@ -1,4 +1,4 @@
-# Wordriver # 
+# Wordriver #
 
 ## Purpose ##
 
@@ -14,14 +14,14 @@ Displays a string of text, fading it in and out while transitioning across the h
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );
+    var pop = Popcorn( "#video" );
 
-pop.wordriver({
-  start: 1,
-  end: 3,
-  text: "hello",
-  target: "wordriverdiv",
-  color: "red"
-});```
+    pop.wordriver({
+      start: 1,
+      end: 3,
+      text: "hello",
+      target: "wordriverdiv",
+      color: "red"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/VDJ2S/)

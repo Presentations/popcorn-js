@@ -1,4 +1,4 @@
-# Pause # 
+# Pause #
 
 ## Purpose ##
 
@@ -8,12 +8,12 @@ Links may cause a new page to display on a new window, or may cause a new page t
 
 ## Options ##
 
-* pauseOnLinkClicked [Boolean]: Specifies whether to have th pause on link clicked functionality turned on or off 
+* pauseOnLinkClicked [Boolean]: Specifies whether to have th pause on link clicked functionality turned on or off
 
 ## Example ##
 
-```var pop = Popcorn( "#video" , {
-  pauseOnLinkClicked: true
-});```
+    var pop = Popcorn( "#video" , {
+      pauseOnLinkClicked: true
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/CVeN6/)

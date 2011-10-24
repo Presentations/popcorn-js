@@ -1,4 +1,4 @@
-# GML # 
+# GML #
 
 ## Purpose ##
 
@@ -13,13 +13,13 @@ Renders a GML tag inside an HTML element
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.gml({
-  start: 0,
-  end: 5,
-  gmltag: "29582",
-  target: "gmldiv"
-});```
+    pop.gml({
+      start: 0,
+      end: 5,
+      gmltag: "29582",
+      target: "gmldiv"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/kzwt8/)

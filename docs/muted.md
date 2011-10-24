@@ -6,7 +6,7 @@ muted is a Popcorn instance method, defined as a passthrough accessor to the HTM
 
 ## Options ##
 
-* **flag** - boolean value stating whether to mute the video or not 
+* **flag** - boolean value stating whether to mute the video or not
 
 ## Use Cases ##
 

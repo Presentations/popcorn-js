@@ -1,4 +1,4 @@
-# Lowerthird # 
+# Lowerthird #
 
 ## Purpose ##
 
@@ -15,14 +15,14 @@ Displays information about a speaker over the video, or in the target div
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.lowerthird({
-  start: 5,
-  end: 15,
-  salutation: "Mr",
-  name: "Hyde",
-  role: "Monster"
-});```
+    pop.lowerthird({
+      start: 5,
+      end: 15,
+      salutation: "Mr",
+      name: "Hyde",
+      role: "Monster"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/d5Du8/)

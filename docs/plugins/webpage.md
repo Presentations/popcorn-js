@@ -1,4 +1,4 @@
-# Webpage # 
+# Webpage #
 
 ## Purpose ##
 
@@ -14,14 +14,14 @@ Creates an iframe showing a website specified by the user
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );
+    var pop = Popcorn( "#video" );
 
-pop.webpage({
-  id: "webpages-a",
-  start: 0,
-  end: 5,
-  src: "http://webmademovies.org/",
-  target: "webpagediv"
-});```
+    pop.webpage({
+      id: "webpages-a",
+      start: 0,
+      end: 5,
+      src: "http://webmademovies.org/",
+      target: "webpagediv"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/pMmAM/)

@@ -1,4 +1,4 @@
-# Tagthisperson # 
+# Tagthisperson #
 
 ## Purpose ##
 
@@ -15,15 +15,15 @@ Adds people's names to an element on the page.
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );
+    var pop = Popcorn( "#video" );
 
-pop.tagthisperson({
-  start: 0,
-  end: 10,
-  person: "Anna Sob",
-  image: "http://newshour.s3.amazonaws.com/photos%2Fspeeches%2Fguests%2FRichardNSmith_thumbnail.jpg",
-  href: "http://annasob.wordpress.com",
-  target: "tagdiv"
-});```
+    pop.tagthisperson({
+      start: 0,
+      end: 10,
+      person: "Anna Sob",
+      image: "http://newshour.s3.amazonaws.com/photos%2Fspeeches%2Fguests%2FRichardNSmith_thumbnail.jpg",
+      href: "http://annasob.wordpress.com",
+      target: "tagdiv"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/ya23v/)

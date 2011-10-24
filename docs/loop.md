@@ -1,6 +1,6 @@
 # loop( flag ) #
 
-controls is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name. When loop is set to true, it will restart the video when it finishes.  By default Popcorn videos will not loop.  
+controls is a Popcorn instance method, defined as a passthrough accessor to the HTMLMediaElement prototype property of the same name. When loop is set to true, it will restart the video when it finishes.  By default Popcorn videos will not loop.
 
 ## Options ##
 

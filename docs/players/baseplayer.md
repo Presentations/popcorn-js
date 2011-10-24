@@ -18,19 +18,19 @@ The baseplayer has numerous use cases, such as :
 
 ## Examples ##
 
-```Popcorn.player( "baseplayer" );
+    Popcorn.player( "baseplayer" );
 
-var pop = Popcorn( "elementID" );
+    var pop = Popcorn( "elementID" );
 
-pop.play();
+    pop.play();
 
-// Add popcorn events here and other functionality
-pop.footnote({
-  start: 1,
-  end: 5,
-  text: "Works with the baseplayer!",
-  target: "footnote-div"
-});```
+    // Add popcorn events here and other functionality
+    pop.footnote({
+      start: 1,
+      end: 5,
+      text: "Works with the baseplayer!",
+      target: "footnote-div"
+    });
 
 // will work with 1.0
 [jsFiddle](http://jsfiddle.net/popcornjs/qQ672/)

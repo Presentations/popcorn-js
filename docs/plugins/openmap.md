@@ -1,4 +1,4 @@
-# OpenMap # 
+# OpenMap #
 
 ## Purpose ##
 
@@ -24,16 +24,16 @@ Adds an OpenLayers map and open map tiles (OpenStreetMap [default], NASA WorldWi
 
 ## Example ##
 
-```var pop = Popcorn( "#video" );     
+    var pop = Popcorn( "#video" );
 
-pop.openmap( {
-  start: 0,
-  end: 20,
-  type: "ROADMAP",
-  target: "map",
-  lat: 43.665429,
-  lng: -79.403323,
-  zoom: "10"
-});```
+    pop.openmap( {
+      start: 0,
+      end: 20,
+      type: "ROADMAP",
+      target: "map",
+      lat: 43.665429,
+      lng: -79.403323,
+      zoom: "10"
+    });
 
 * [jsFiddle Example](http://jsfiddle.net/popcornjs/NKtvy/)
