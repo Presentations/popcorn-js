@@ -1,4 +1,4 @@
-# Googlefeed # 
+# Googlefeed #
 
 ## Purpose ##
 

@@ -18,30 +18,30 @@ The user sepcifies the the source of there json file in a data-timeline-sources 
 
 * Parses a popcorn json file ( this examples is assuming your json file is called data.json ) and that you are using data-timeline-sources
 
-```<html>
-  <head>
-    <script src="popcorn-complete.js"></script>
-  </head>
-  <body>
-    <video id="video" data-timeline-sources="data/data.json"
+`<html>`
+  `<head>`
+    `<script src="popcorn-complete.js"></script>`
+  `</head>`
+  `<body>`
+    `<video id="video" data-timeline-sources="data/data.json"`
 
-      controls
-      width= '250px'
-      poster="../../test/poster.png"> 
+      `controls`
+      `width= '250px'`
+      `poster="../../test/poster.png">` 
 
-      <source id='mp4'
-        src="../../test/trailer.mp4"
-        type='video/mp4; codecs="avc1, mp4a"'> 
+      `<source id='mp4'`
+        `src="../../test/trailer.mp4"`
+        `type='video/mp4; codecs="avc1, mp4a"'>`
 
-      <source id='ogv'
-        src="../../test/trailer.ogv"
-        type='video/ogg; codecs="theora, vorbis"'> 
+      `<source id='ogv'`
+        `src="../../test/trailer.ogv"`
+        `type='video/ogg; codecs="theora, vorbis"'>`
 
-      <p>Your user agent does not support the HTML5 Video element.</p> 
+      `<p>Your user agent does not support the HTML5 Video element.</p>`
 
-    </video> 
-    <div id="footnote-container"></div>
-    <div id="map-container"></div>
-    <div id="iframe-container"></div>
-  </body>
-</html>```
+    `</video>`
+    `<div id="footnote-container"></div>`
+    `<div id="map-container"></div>`
+    `<div id="iframe-container"></div>`
+  `</body>`
+`</html>`

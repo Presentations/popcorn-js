@@ -2,7 +2,6 @@
 
 ## Purpose ##
 
-
 Adds the ability to render JSON using templates via the Mustache templating library.
 
 ## Options ##
