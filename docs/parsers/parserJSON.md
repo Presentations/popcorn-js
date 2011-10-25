@@ -43,4 +43,4 @@ The user sepcifies the the source of there json file in a data-timeline-sources 
         <div id="map-container"></div>
         <div id="iframe-container"></div>
       </body>
-   </html>
+    </html>

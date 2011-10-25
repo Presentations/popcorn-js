@@ -17,7 +17,7 @@ The user sepcifies the the source of there SBV file in a data-timeline-sources a
 ## Example ##
 
 * Parses a popcorn SBV subtitle file to populate a subtitle track
-    <html>
+    `<html>
       <head>
         <script src="popcorn-complete.js"></script>
       </head>
@@ -42,4 +42,4 @@ The user sepcifies the the source of there SBV file in a data-timeline-sources a
         <div id="map-container"></div>
         <div id="iframe-container"></div>
       </body>
-    </html>
+    </html>`
