@@ -17,19 +17,26 @@ The user sepcifies the the source of there SBV file in a data-timeline-sources a
 ## Example ##
 
 * Parses a popcorn SBV subtitle file to populate a subtitle track
-    <video id="video" data-timeline-sources="data/data.json"
-      controls
-      width= '250px'
-      poster="../../test/poster.png">
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;script src="popcorn-complete.js"&gt;&lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;video id="video" data-timeline-sources="data/data.json"
+          controls
+          width= '250px'
+          poster="../../test/poster.png"&gt;
 
-      <source id='mp4'
-        src="../../test/trailer.mp4"
-        type='video/mp4; codecs="avc1, mp4a"'>
+          &lt;source id='mp4'
+            src="../../test/trailer.mp4"
+            type='video/mp4; codecs="avc1, mp4a"'&gt;
 
-      <source id='ogv'
-        src="../../test/trailer.ogv"
-        type='video/ogg; codecs="theora, vorbis"'>
+          &lt;source id='ogv'
+            src="../../test/trailer.ogv"
+            type='video/ogg; codecs="theora, vorbis"'&gt;
 
-      <p>Your user agent does not support the HTML5 Video element.</p>
+          &lt;p&gt;Your user agent does not support the HTML5 Video element.&lt;/p&gt;
 
-    </video>
+        &lt;/video&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
