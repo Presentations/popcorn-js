@@ -17,8 +17,8 @@ The user sepcifies the the source of there SBV file in a data-timeline-sources a
 ## Example ##
 
 * Parses a popcorn SBV subtitle file to populate a subtitle track
-    <!doctype html>
-    <html>
+
+    `<html>`
       <head>
         <script src="popcorn-complete.js"></script>
       </head>
