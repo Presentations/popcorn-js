@@ -16,4 +16,4 @@ Popcorn("#video-element-id", { frameAnimation: true })
 
 ## Examples ##
 
-* Update the currentTime of a video [jsFiddle]()
+* Update the currentTime of a video [jsFiddle](http://jsfiddle.net/popcornjs/JVUdb/)
