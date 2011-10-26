@@ -8,7 +8,7 @@ All Popcorn instances will inherit this newly created method. See below for plug
 
 ## Options ##
 
-* **pluginName** - will be the name for your newly created plugin.  Will also be the name of the instance method in which you plugin will be accessed through.
+* **pluginName** - will be the name for your newly created plugin.  Will also be the name of the instance method in which your plugin will be accessed through.
 * **definitionObject** - an in which the setup, start, end, teardown functions will be implemented for the given plugin
 
 ## Use Cases ##
