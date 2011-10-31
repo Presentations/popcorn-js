@@ -2,7 +2,7 @@
 
 ## Purpose ##
 
-Setting the Popcorn constructor’s option object property frameAnimation to true allows you to opt-in your playback to be managed by a requestAnimationFrame loop, resulting in up to 60 fps playback. This will also grant the use of the frame callback method in any plugins that implement it.
+Setting the Popcorn constructor's option object property frameAnimation to true allows you to opt-in your playback to be managed by a requestAnimationFrame loop, resulting in up to 60 fps playback. This will also grant the use of the frame callback method in any plugins that implement it.
 
 ## Options ##
 

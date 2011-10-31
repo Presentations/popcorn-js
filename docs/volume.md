@@ -4,7 +4,7 @@
 
 Get or Set the Popcorn video object instance volume
 
-Calling the .volume( volumeValue ) method will trigger a “volumechange” event.
+Calling the .volume( volumeValue ) method will trigger a "volumechange" event.
 
 ## Options ##
 
