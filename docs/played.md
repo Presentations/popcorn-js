@@ -16,4 +16,4 @@ played() is a Popcorn instance method, defined as a passthrough accessor to the 
 ## Examples ##
 
 * Show how much has been played at 1 second [jsFiddle](http://jsfiddle.net/popcornjs/uWUjJ/)
-* Show how much of the video has been played as a percentage as the video is playing [jsFiddle](http://jsfiddle.net/popcornjs/LkfJL/)
+* Show how much of the video has been played as a percentage as the video is playing [jsFiddle](http://jsfiddle.net/popcornjs/LkfJL/1/)

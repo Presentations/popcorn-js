@@ -15,4 +15,4 @@ buffered() is a Popcorn instance method, defined as a passthrough accessor to th
 ## Examples ##
 
 * Show buffered data on page load [jsFiddle](http://jsfiddle.net/popcornjs/LmeLN/)
-* Play the video when more then half of the video has loaded [jsFiddle](http://jsfiddle.net/popcornjs/QRSZE/)
+* Play the video when more then half of the video has loaded [jsFiddle](http://jsfiddle.net/popcornjs/QRSZE/1/)
