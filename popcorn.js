@@ -10,7 +10,7 @@
           "addTrackEvent removeTrackEvent getTrackEvents getTrackEvent getLastTrackEventId " +
           "timeUpdate plugin removePlugin compose effect parser xhr getJSONP getScript" ).split(/\s+/);
 
-    while( methods.length ) {
+    while ( methods.length ) {
       global.Popcorn[ methods.shift() ] = function() {};
     }
     return;
@@ -58,30 +58,30 @@
       };
   }()),
 
-  refresh = function ( obj ) {
+  refresh = function( obj ) {
     var currentTime = obj.media.currentTime,
+      animation = obj.options.frameAnimation,
+      disabled = obj.data.disabled,
       tracks = obj.data.trackEvents,
       animating = tracks.animating,
       start = tracks.startIndex,
-      animIndex = 0,
-      disabled = obj.data.disabled,
       registryByName = Popcorn.registryByName,
+      animIndex = 0,
       byStart, natives, type;
 
     start = Math.min( start + 1, tracks.byStart.length - 2 );
 
     while ( start > 0 && tracks.byStart[ start ] ) {
 
-      byStart = tracks.byStart [ start ];
+      byStart = tracks.byStart[ start ];
       natives = byStart._natives;
       type = natives && natives.type;
 
       if ( !natives ||
           ( !!registryByName[ type ] || !!obj[ type ] ) ) {
 
-        if ( byStart.start <= currentTime &&
-          byStart.end > currentTime &&
-          disabled.indexOf( type ) === -1 ) {
+        if ( ( byStart.start <= currentTime && byStart.end > currentTime ) &&
+                disabled.indexOf( type ) === -1 ) {
 
           if ( !byStart._running ) {
             byStart._running = true;
@@ -89,8 +89,8 @@
 
             // if the 'frameAnimation' option is used,
             // push the current byStart object into the `animating` cue
-            if ( obj.options.frameAnimation &&
-              ( byStart && byStart._running && byStart.natives.frame ) ) {
+            if ( animation &&
+                ( byStart && byStart._running && byStart.natives.frame ) ) {
 
               natives.frame.call( obj, null, byStart, currentTime );
             }
@@ -100,13 +100,12 @@
           byStart._running = false;
           natives.end.call( obj, null, byStart );
 
-          if ( obj.options.frameAnimation && byStart._natives.frame ) {
+          if ( animation && byStart._natives.frame ) {
             animIndex = animating.indexOf( byStart );
             if ( animIndex >= 0 ) {
               animating.splice( animIndex, 1 );
             }
           }
-
         }
       }
 
@@ -203,6 +202,9 @@
 
       this.data = {
 
+        // Executed by either timeupdate event or in rAF loop
+        timeUpdate: Popcorn.nop,
+
         // Allows disabling a plugin per instance
         disabled: [],
 
@@ -244,7 +246,7 @@
       //  Wrap true ready check
       var isReady = function( that ) {
 
-        var duration, videoDurationPlus, animate;
+        var duration, videoDurationPlus;
 
         if ( that.media.readyState >= 2 ) {
           //  Adding padding to the front and end of the arrays
@@ -264,25 +266,25 @@
             //  requestAnimFrame is used instead of "timeupdate" media event.
             //  This is for greater frame time accuracy, theoretically up to
             //  60 frames per second as opposed to ~4 ( ~every 15-250ms)
-            animate = function () {
+            that.data.timeUpdate = function () {
 
               Popcorn.timeUpdate( that, {} );
 
               that.trigger( "timeupdate" );
 
-              !that.isDestroyed && requestAnimFrame( animate );
+              !that.isDestroyed && requestAnimFrame( that.data.timeUpdate );
             };
 
-            !that.isDestroyed && requestAnimFrame( animate );
+            !that.isDestroyed && requestAnimFrame( that.data.timeUpdate );
 
           } else {
 
-            that.data.timeUpdateFunction = function( event ) {
+            that.data.timeUpdate = function( event ) {
               Popcorn.timeUpdate( that, event );
             };
 
             if ( !that.isDestroyed ) {
-              that.media.addEventListener( "timeupdate", that.data.timeUpdateFunction, false );
+              that.media.addEventListener( "timeupdate", that.data.timeUpdate, false );
             }
           }
         } else {
@@ -444,7 +446,7 @@
       }
 
       if ( !instance.isDestroyed ) {
-        instance.data.timeUpdateFunction && instance.media.removeEventListener( "timeupdate", instance.data.timeUpdateFunction, false );
+        instance.data.timeUpdate && instance.media.removeEventListener( "timeupdate", instance.data.timeUpdate, false );
         instance.isDestroyed = true;
       }
     }
