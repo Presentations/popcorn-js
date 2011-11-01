@@ -1627,6 +1627,7 @@ test( "frame function (frameAnimation)", function() {
     if ( ++count === expects ) {
       // clean up added events after tests
       Popcorn.removePlugin( "frameFn" );
+      $pop.destroy();
       start();
     }
   }
@@ -1850,6 +1851,7 @@ test( "Update Timer (frameAnimation)", function() {
       Popcorn.removePlugin( "forwards" );
       Popcorn.removePlugin( "backwards" );
       Popcorn.removePlugin( "wrapper" );
+      p2.destroy();
       start();
     }
   }
@@ -2219,6 +2221,8 @@ test( "Popcorn Compose", function() {
     }
   });
 
+  popped.pause( popped.duration() );
+
   popped.testPlugin({
     start: 0,
     end: 1,
@@ -2267,13 +2271,11 @@ test( "Popcorn Compose", function() {
   equal( test.two.setup, 3, "three compose two setup" );
   plus();
 
-  popped.currentTime( 0 ).pause();
-
   popped.exec( 0, function() {
     equal( test.one.running, 1, "one compose running" );
-   plus();
-   equal( test.two.running, 1, "one effect running" );
-   plus();
+    plus();
+    equal( test.two.running, 1, "one effect running" );
+    plus();
   })
   .exec( 1, function() {
     equal( test.one.running, 0, "no compose running" );
@@ -2326,7 +2328,6 @@ test( "Popcorn Compose", function() {
   // runs once, 2 tests
   Popcorn.plugin( "pluginOptions1", {
     _setup: function( options ) {
-      console.log( "runs once?" );
       ok( options.pluginoption, "plugin option one exists at setup" );
       plus();
       ok( !options.composeoption, "compose option one does not exist at setup" );
@@ -2975,6 +2976,7 @@ test( "Index Integrity ( timeUpdate )", function() {
     if ( ++count === expects ) {
       start();
       Popcorn.removePlugin( "ff" );
+      $pop.destroy();
     }
   }
 
@@ -3045,6 +3047,7 @@ test( "Index Integrity (frameAnimation)", function() {
     if ( ++count === expects ) {
       start();
       Popcorn.removePlugin( "ff" );
+      $pop.destroy();
     }
   }
 
@@ -3991,7 +3994,8 @@ test( "Basic Audio Support (frameAnimation)", function() {
   function plus() {
 
     if ( ++count === expects ) {
-
+      popped.destroy();
+      popObj.destroy();
       start();
     }
   }
