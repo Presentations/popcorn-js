@@ -108,8 +108,8 @@
               media.dispatchEvent( "volumechange" );
             }
 
-            if ( vol && lastVolume !== vol() ) {
-              lastVolume = vol();
+            if ( vimeoObject.api_getVolume && lastVolume !==  vimeoObject.api_getVolume() ) {
+              lastVolume = vimeoObject.api_getVolume();
               media.dispatchEvent( "volumechange" );
             }
 

@@ -82,16 +82,13 @@ Popcorn.player( "youtube", {
 
         var volumeupdate = function() {
 
-          var isMuted = youtubeObject.isMuted,
-              getVolume = youtubeObject.getVolume;
-
-          if ( isMuted && lastMuted !== isMuted() ) {
+          if ( youtubeObject.isMuted && lastMuted !== youtubeObject.isMuted() ) {
 
             lastMuted = youtubeObject.isMuted();
             media.dispatchEvent( "volumechange" );
           }
 
-          if ( getVolume && lastVolume !== getVolume() ) {
+          if ( youtubeObject.getVolume && lastVolume !== youtubeObject.getVolume() ) {
 
             lastVolume = youtubeObject.getVolume();
             media.dispatchEvent( "volumechange" );
