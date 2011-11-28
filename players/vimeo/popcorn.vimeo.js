@@ -102,14 +102,14 @@
           var volumeUpdate = function() {
 
             var muted = isMuted(),
-            vol = vimeoObject.api_getVolume();
+            vol = vimeoObject.api_getVolume;
             if ( lastMuted !== muted ) {
               lastMuted = muted;
               media.dispatchEvent( "volumechange" );
             }
 
-            if ( lastVolume !== vol ) {
-              lastVolume = vol;
+            if ( vol && lastVolume !== vol() ) {
+              lastVolume = vol();
               media.dispatchEvent( "volumechange" );
             }
 
