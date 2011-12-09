@@ -101,8 +101,8 @@
 
           var volumeUpdate = function() {
 
-            var muted = isMuted(),
-            vol = vimeoObject.api_getVolume;
+            var muted = isMuted();
+
             if ( lastMuted !== muted ) {
               lastMuted = muted;
               media.dispatchEvent( "volumechange" );
