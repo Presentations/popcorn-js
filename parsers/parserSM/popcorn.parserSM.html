@@ -41,6 +41,16 @@
 
       popcorn.parseSM( "data/data.sm", function( data ) { 
 
+        console.log( data );
+        for( var i = data[ 0 ].start; i < popcorn.duration(); i += data.beatRate ) {
+
+          popcorn.exec( i, function() {
+
+            // call pulse method here
+            steps.backgroundColor = "grey";
+          });
+        }
+
         for( var i = 0, l = data.length; i < l; i++ ) {
           popcorn.exec( data[ i ].start, function() {
             console.log( data[ count ].note );
