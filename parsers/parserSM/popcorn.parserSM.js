@@ -20,38 +20,44 @@
       });
       dataObj.NOTES[ 5 ][ i ] = notes;
     }
-    console.log( dataObj );
 
     // find #BPMS
-    var bpms = dataObj.BPMS.split( "=" )[ 1 ];
-    //console.log(bpms);
-    var beatRate = 60 / bpms;
-    //console.log( beatRate * dataObj.NOTES[ 5 ].length );
-    var currentBeat = 0;
+    var bpms = dataObj.BPMS.split( "=" )[ 1 ],
+        offSet = 0 - +dataObj.OFFSET.split( ":" ),
+        beatRate = 60 / bpms,
+        currentTime = 0 + offSet, 
+        dataNotes = dataObj.NOTES,
+        measures = dataNotes[ dataNotes.length - 1 ],
+        retObj = {
+          data: []
+        };
     
-    var measures = data.notes.split( "," );
-    
+    console.log( "START TIME WITH OFFSET", currentTime );
     for ( var i = 0; i < measures.length; i++ ) {
     
-      var notes = measures[ i ].split( "\n" );
+      var notes = measures[ i ],
+          numNotes = notes.length;
       
-      var noteSize = beatRate / notes.length;
+      var noteRate = notes.length / 4;
       for ( var j = 0; j < notes.length; j++ ) {
       
-        var noteStart = currentBeat;
-        var noteEnd = currentBeat + noteSize;
+        var noteStart = currentTime + ( beatRate /  noteRate );
+
+        currentTime = noteStart;
         retObj.data.push({
           start: noteStart,
-          end: noteEnd,
           note: notes[ j ]
         });
       }
     }
         
-    console.log( retObj.data );
     Popcorn.forEach( dataObj.data, function ( obj, key ) {
       retObj.data.push( obj );
     });
+
+    retObj.bpm = bpms;
+    retObj.beatRate = beatRate;
+    retObj.offSet = offSet;
 
     return retObj;
   });
