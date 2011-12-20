@@ -47,7 +47,10 @@
         if( notes[ j ] !== "0000" ) {
           retObj.data.push({
             start: noteStart,
-            note: notes[ j ]
+            note: notes[ j ],
+            bpm: bpms,
+            beatRate: beatRate,
+            offSet: offSet
           });
         }
       }
@@ -56,10 +59,6 @@
     Popcorn.forEach( dataObj.data, function ( obj, key ) {
       retObj.data.push( obj );
     });
-
-    retObj.bpm = bpms;
-    retObj.beatRate = beatRate;
-    retObj.offSet = offSet;
 
     return retObj;
   });

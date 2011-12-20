@@ -31,7 +31,7 @@
 
       window.addEventListener( "keydown", function( event ) {
 
-        arrowsDown[ event.keyCode ]();
+        arrowsDown[ event.keyCode ] && arrowsDown[ event.keyCode ]();
       });
 
       window.addEventListener( "keyup", function( event ) {
@@ -39,15 +39,21 @@
         userSteps.innerHTML = "0000";
       });
 
+      popcorn.listen( "canplayall", function() {
       popcorn.parseSM( "data/data.sm", function( data ) { 
 
-        console.log( data );
-        for( var i = data[ 0 ].start; i < popcorn.duration(); i += data.beatRate ) {
+
+        var beatRate = data[ 0 ].beatRate;
+
+        for( var i = data[ 0 ].start; i < popcorn.duration(); i += beatRate ) {
 
           popcorn.exec( i, function() {
 
             // call pulse method here
-            steps.backgroundColor = "grey";
+            steps.style.backgroundColor = "#22ff00";
+            setTimeout(function() {
+              steps.style.backgroundColor = "#FFFFFF";
+            }, 250 );
           });
         }
 
@@ -59,6 +65,7 @@
           });
         }
       });
+    });
     });
   </script>
 </head>
