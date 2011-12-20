@@ -44,10 +44,12 @@
         var noteStart = currentTime + ( beatRate /  noteRate );
 
         currentTime = noteStart;
-        retObj.data.push({
-          start: noteStart,
-          note: notes[ j ]
-        });
+        if( notes[ j ] !== "0000" ) {
+          retObj.data.push({
+            start: noteStart,
+            note: notes[ j ]
+          });
+        }
       }
     }
         

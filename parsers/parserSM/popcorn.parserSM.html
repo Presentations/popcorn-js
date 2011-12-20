@@ -7,9 +7,37 @@
   <script>
     Popcorn(function() {
 
-      var popcorn = Popcorn( "#stepCorn" ),
-          count = 0,
-          steps = document.getElementById( "steps" );
+      var popcorn = Popcorn( "#stepCorn", {
+        frameAnimation: true
+      }),
+      count = 0,
+      steps = document.getElementById( "steps" ),
+      userSteps = document.getElementById( "userSteps" ),
+      arrowsDown = {
+
+        37: function()  {
+          userSteps.innerHTML = "1000";
+        },
+        38: function() {
+          userSteps.innerHTML = "0100";
+        },
+        39: function() {
+          userSteps.innerHTML = "0001";
+        },
+        40: function() {
+          userSteps.innerHTML = "0010";
+        }
+      };
+
+      window.addEventListener( "keydown", function( event ) {
+
+        arrowsDown[ event.keyCode ]();
+      });
+
+      window.addEventListener( "keyup", function( event ) {
+
+        userSteps.innerHTML = "0000";
+      });
 
       popcorn.parseSM( "data/data.sm", function( data ) { 
 
@@ -25,8 +53,10 @@
   </script>
 </head>
 <body>
-  <h1>StepCorn</h1>
-  <p id="steps"></p>
+  <h1>Scrolling Arrows</h1>
+  <h2 id="steps"></h2>
+  <h1>Input Arrows</h1>
+  <h2 id="userSteps">0000</h2>
   <div>
     <audio id="stepCorn" controls> 
       <source src="data/nirvanaDestiny.ogg" />
