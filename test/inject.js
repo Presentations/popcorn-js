@@ -51,11 +51,11 @@
 	// QUnit (jQuery)
 	// http://docs.jquery.com/QUnit
 	if ( typeof QUnit !== "undefined" ) {
-		QUnit.done = function(results){
+		QUnit.done = function(failed, passed, total, runtime){
 			submit({
-				fail: results.failed,
+				fail: failed,
 				error: 0,
-				total: results.total
+				total: total
 			});
 		};
 
