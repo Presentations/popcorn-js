@@ -55,7 +55,7 @@
 			submit({
 				fail: failed,
 				error: 0,
-				total: total
+				total: passed
 			});
 		};
 
