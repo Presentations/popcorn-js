@@ -6,6 +6,7 @@ asdiasdiaids
 asdasd
 asdasdasd
 agshasjgkaj
+  <sdasdscript src="../../test/inject.js"></script>
 aasdadoooooo
 kkkk
 hhhhh
