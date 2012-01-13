@@ -424,10 +424,10 @@ var QUnit = {
 	},
 
 	stop: function(count) {
-		config.semaphore += count || 1;
+		//config.semaphore += count || 1;
 		config.blocking = true;
 
-		if ( config.testTimeout && defined.setTimeout ) {
+		if ( count ) {
 			clearTimeout(config.timeout);
 			config.timeout = window.setTimeout(function() {
 				QUnit.ok( false, "Test timed out" );
