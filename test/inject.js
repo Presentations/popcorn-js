@@ -1,6 +1,6 @@
 (function(){
 
-	var DEBUG = true;
+	var DEBUG = false;
 
 	var doPost = false;
 
@@ -13,7 +13,7 @@
 	if( ( index = search.indexOf( "swarmURL=" ) ) != -1 )
 		url = decodeURIComponent( search.slice( index + 9 ) );
 
-	if ( DEBUG && (!url || url.indexOf("http") !== 0) ) {
+	if ( !DEBUG && (!url || url.indexOf("http") !== 0) ) {
 		return;
 	}
 
