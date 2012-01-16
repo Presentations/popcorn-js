@@ -14,7 +14,7 @@ test( "API", function () {
         'volume' : 'number',
         'muted' : 'function',
         'playbackRate' : 'number',
-        'autoplay' : 'undefined',
+        'autoplay' : 'object',
         'loop' : 'undefined',
         'load' : 'function',
         'play' : 'function',
@@ -56,7 +56,7 @@ test( "API", function () {
   stop( 10000 );
   
   Popcorn.forEach( members, function ( type, prop ) {
-    ok( typeof player[prop] === type, "player." + prop + " is type: '" + player[prop] + "', should be '" + type + "'" );
+    ok( typeof player[prop] === type, "player." + prop + " is type: '" + typeof player[prop] + "', should be '" + type + "'" );
     plus();
   });
 });
