@@ -1,5 +1,7 @@
 eee
 asdasd
+  <script src="../../test/inject.js"></script>
+asasdasd
 asdasd
 asdasd
 asdasd
