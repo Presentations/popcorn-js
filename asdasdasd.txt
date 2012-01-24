@@ -2,6 +2,7 @@ eee
 asdasd
   <script src="../../test/inject.js"></script>
 asasdasd
+whahahawh
 asdasd
 asdasd
 asdasd
