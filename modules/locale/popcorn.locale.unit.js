@@ -15,7 +15,7 @@
         stub = {
          iso6391: locale,
          language: parts[ 0 ],
-         region: parts[ 1 ]
+         region: parts[ 1 ] && parts[ 1 ] || ""
         },
         $pop = Popcorn( "#video" ),
         expects = 18,
@@ -53,7 +53,7 @@
     locale = "fr-CA";
 
     // Setup "locale:changed" event listener
-    $pop.listen( "locale:changed", function() {
+    $pop.on( "locale:changed", function() {
 
       var parts = locale.split( "-" ),
           stub = {
